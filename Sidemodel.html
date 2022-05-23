@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Sidemodel.css" />
+    <link rel="javascript" href="Sidemodel.js" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="Sidemodel.css">
-	<link rel="javascript" href="Sidemodel.js">
-
-</head>
-
-<body>
-
-	<div class="wrapper side-panel-open">
-		<div class="main">
-
-		</div>
-		<button class="side-panel-toggle" type="button">
-			<span class="material-icons sp-icon-open">keyboard_double_arrow_left</span>
-			<span class="material-icons sp-icon-close">keyboard_double_arrow_right</span>
-		</button>
-		<div class="side-panel">
-
-		</div>
-	</div>
-	<script>document.querySelector(".side-panel-toggle").addEventListener("click", () => {
-			document.querySelector(".wrapper").classList.toggle("side-panel-open");
-		});
-	</script>
-
-</body>
-
+  <body>
+    <div class="main">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+      perspiciatis architecto illo exercitationem error sint optio, assumenda
+      voluptatum vel excepturi quas obcaecati, amet vitae earum cum nihil
+      molestias enim sed. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Quae, tempora odio fugiat molestiae exercitationem dolor totam
+      doloremque expedita. Vitae architecto magni dicta illo quos iure
+      voluptatem iste cupiditate neque? Illum nostrum dolorem veritatis aliquam
+      nemo eveniet at libero voluptatibus esse quibusdam atque excepturi
+      quisquam corporis, mollitia suscipit maiores dignissimos a quos animi
+      totam ad nisi! Architecto est dignissimos alias ipsum odit ducimus non,
+      eveniet tempore corporis excepturi eum soluta officiis, adipisci corrupti
+      ullam exercitationem? Nihil ab quae quo at commodi!
+    </div>
+    <div class="wrapper side-panel-open">
+      <button class="side-panel-toggle" type="button">
+        <span class="material-icons sp-icon-open"
+          >keyboard_double_arrow_left</span
+        >
+        <span class="material-icons sp-icon-close"
+          >keyboard_double_arrow_right</span
+        >
+      </button>
+      <div class="side-panel"></div>
+    </div>
+    <script>
+      document
+        .querySelector(".side-panel-toggle")
+        .addEventListener("click", () => {
+          document
+            .querySelector(".wrapper")
+            .classList.toggle("side-panel-open");
+        });
+    </script>
+  </body>
 </html>
