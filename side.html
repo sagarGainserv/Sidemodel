@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="side.css">
+
+</head>
+
+<body>
+  <button id='sidebarBtn' class='btn'>Sidebar</button>
+  <script>sidebarBtn.addEventListener("click", () => {
+      let existingSidebar = document.getElementById('sidebar')
+      if (existingSidebar) {
+        removeSidebar(existingSidebar)
+      } else {
+        let sidebar = document.createElement('section')
+        sidebar.id = "sidebar"
+        sidebar.className = "slide-in"
+        sidebar.innerHTML = "Sample Sidebar"
+        document.body.append(sidebar)
+        sidebar.addEventListener("click", () => removeSidebar(sidebar))
+      }
+    })
+    function removeSidebar(sidebar) {
+      sidebar.className = "slide-out"
+      setTimeout(() => sidebar.remove(), 775)
+    }
+  </script>
+</body>
+
+</html>
