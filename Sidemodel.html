@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Title of the document</title>
-<link rel="stylesheet" href="Sidemodel.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="Sidemodel.css">
+	<link rel="javascript" href="Sidemodel.js">
+
 </head>
 
 <body>
-    <div class="container demo">
 
-		<button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">
-			Right Sidebar Modal
+	<div class="wrapper side-panel-open">
+		<div class="main">
+
+		</div>
+		<button class="side-panel-toggle" type="button">
+			<span class="material-icons sp-icon-open">keyboard_double_arrow_left</span>
+			<span class="material-icons sp-icon-close">keyboard_double_arrow_right</span>
 		</button>
+		<div class="side-panel">
+
+		</div>
 	</div>
+	<script>document.querySelector(".side-panel-toggle").addEventListener("click", () => {
+			document.querySelector(".wrapper").classList.toggle("side-panel-open");
+		});
+	</script>
 
-	
-	<!-- Modal -->
-	<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
-				</div>
-
-				<div class="modal-body">
-					<p>Anim
-					</p>
-				</div>
-
-			</div><!-- modal-content -->
-		</div><!-- modal-dialog -->
-	</div><!-- modal -->
-	
-	
-</div><!-- container -->
 </body>
 
 </html>
