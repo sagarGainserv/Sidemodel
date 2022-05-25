@@ -1,8 +1,14 @@
+.root {
+  --primary-font: BR Hendrix;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
   line-height: 1.5;
 }
+
+/*----------------------------- SIDE BAR CSS ---------------------------------------*/
 
 .wrapper {
   display: flex;
@@ -22,9 +28,8 @@ body {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-
-  color: #ffffff;
-  background: #293a36;
+  color: rgb(255, 255, 255);
+  background: #000000;
   border: none;
   border-radius: 5px 0 0 5px;
   outline: none;
@@ -32,7 +37,7 @@ body {
 }
 
 .side-panel-toggle:hover {
-  background: #7baaa1;
+  background: #343a40;
 }
 
 .sp-icon-close {
@@ -41,12 +46,14 @@ body {
 
 .side-panel {
   display: none;
-  width: 200px;
+  width: 400px;
   flex-shrink: 0;
   padding: 20px;
-  color: #ffffff;
-  background: #293a36;
+  color: white;
+  background: #000000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  margin: 0;
+  padding: 0;
 }
 
 .side-panel-open .side-panel {
@@ -59,4 +66,264 @@ body {
 
 .side-panel-open .sp-icon-close {
   display: initial !important;
+}
+
+/*-----------------------------PANEl TAB CSS---------------------------------------*/
+
+.title {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.tabContainer {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.tabContainer .buttonContainer {
+  height: 5%;
+}
+
+.tabContainer .buttonContainer button {
+  width: 33.33%;
+  height: 100%;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #646f79;
+  background-color: #343a40;
+}
+
+.tabContainer .tabPanel {
+  height: 90%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: 22px;
+  display: none;
+}
+
+/*----------------------------- TAB-1 CSS ---------------------------------------*/
+
+.input-feald {
+  width: 92.5%;
+  height: 5%;
+  background: #343434;
+  border-color: transparent;
+  color: white;
+  padding-left: 5%;
+  margin-top: 1.5%;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
+  height: 8%;
+  width: 100%;
+  margin: 5% 0%;
+  border-radius: 4px;
+  padding: 8% 0%;
+  background: #343434;
+}
+
+.btn-gp-btns {
+  height: 100%;
+  width: 20%;
+  border-radius: 4%;
+  background-color: #343434;
+  border-color: transparent;
+  color: #878787 !important;
+}
+
+.btn-gp-btns:hover {
+  height: 100%;
+  width: 20%;
+  border-radius: 4%;
+  border: 2px #1494ff solid !important;
+  color: #1494ff !important;
+}
+
+.tab-1-paragraph {
+  margin-top: 5%;
+  text-align: initial;
+  font-size: small;
+  font-size: medium;
+}
+
+.tab-1-button-group-two {
+  display: flex;
+  height: 6%;
+}
+
+.tab-1-default-btn {
+  width: 50%;
+  background: #866afb;
+  color: white;
+  border-radius: 5px;
+}
+
+.tab-1-saved-btn {
+  width: 50%;
+  background: #646f79;
+  color: white;
+  border-radius: 5px;
+}
+
+.tab-1-button-group-one {
+  margin-top: 4%;
+  height: 6%;
+}
+
+.tab-1-startfrom-btn {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  background: #09b570;
+  color: white;
+}
+
+.templates {
+  display: flex;
+  height: 50%;
+  flex-wrap: wrap;
+  margin: 5% 0%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.template {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  width: 45%;
+  height: 40%;
+  margin: 2%;
+  padding: 1%;
+  background: #343434;
+}
+
+.template:hover {
+  border-radius: 4%;
+  border: 2px #09b570 solid !important;
+}
+
+.tempimg {
+  width: 100%;
+  height: 78%;
+}
+
+.temp-title {
+  margin: 2%;
+  font-size: 100%;
+  margin-top: 5%;
+  width: 100%;
+  color: white;
+}
+
+/*----------------------------- Modal CSS ---------------------------------------*/
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 10%;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 40%;
+  height: 60%;
+  color: #000;
+  padding: 1%;
+}
+
+.modal-header {
+  height: 25%;
+}
+
+.modal-header .modal-hello {
+  margin-top: 5%;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 8%;
+}
+
+.modal-header .modal-paragraph {
+  margin-top: -2%;
+  font-size: 20px;
+  width: 100%;
+}
+
+.modal-body {
+  height: 42%;
+}
+
+.modal-body .modal-image {
+  height: 90%;
+  width: 80%;
+  margin-top: 5%;
+}
+
+.modal-footer {
+  height: 30%;
+  margin-top: 1%;
+}
+
+.modal-footer .modal-learnmore-btn {
+  background: #4ba6ef;
+  color: white;
+  border-radius: 3px;
+  height: 25%;
+  padding: 0% 3%;
+  margin-top: 6%;
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

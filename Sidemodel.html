@@ -5,29 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Sidemodel.css" />
-    <link rel="javascript" href="Sidemodel.js" />
+    <script src="Sidemodel.js"></script>
   </head>
 
   <body>
-    <div class="main">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-      perspiciatis architecto illo exercitationem error sint optio, assumenda
-      voluptatum vel excepturi quas obcaecati, amet vitae earum cum nihil
-      molestias enim sed. Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Quae, tempora odio fugiat molestiae exercitationem dolor totam
-      doloremque expedita. Vitae architecto magni dicta illo quos iure
-      voluptatem iste cupiditate neque? Illum nostrum dolorem veritatis aliquam
-      nemo eveniet at libero voluptatibus esse quibusdam atque excepturi
-      quisquam corporis, mollitia suscipit maiores dignissimos a quos animi
-      totam ad nisi! Architecto est dignissimos alias ipsum odit ducimus non,
-      eveniet tempore corporis excepturi eum soluta officiis, adipisci corrupti
-      ullam exercitationem? Nihil ab quae quo at commodi!
-    </div>
+    <div class="main"></div>
     <div class="wrapper side-panel-open">
       <button class="side-panel-toggle" type="button">
         <span class="material-icons sp-icon-open"
@@ -37,7 +25,97 @@
           >keyboard_double_arrow_right</span
         >
       </button>
-      <div class="side-panel"></div>
+      <div class="side-panel">
+        <div class="tabContainer">
+          <div class="buttonContainer">
+            <button onclick="showPanel(0)">Layout</button>
+            <button onclick="showPanel(1)">Builder</button>
+            <button onclick="showPanel(2)">Settings</button>
+          </div>
+          <!-- ------------------------------------layout---------------------------------- -->
+          <div class="tabPanel">
+            <input type="text" class="input-feald" placeholder="Step Name" />
+
+            <div class="button-group">
+              <button class="btn-gp-btns" id="myBtn">Model</button>
+              <button class="btn-gp-btns" onclick="as()">Slide up</button>
+              <button class="btn-gp-btns">Tooltop</button>
+              <button class="btn-gp-btns">HotSpot</button>
+            </div>
+
+            <p class="tab-1-paragraph">Add modal step</p>
+
+            <div class="tab-1-button-group-two">
+              <button class="tab-1-default-btn">Default</button>
+              <button class="tab-1-saved-btn">Saved</button>
+            </div>
+            <div class="tab-1-button-group-one">
+              <button class="tab-1-startfrom-btn">Start From Scratch</button>
+            </div>
+            <!------------------------- Template----------------------- -->
+            <div class="templates">
+              <button class="template" onclick="showPanel(1)">
+                <img class="tempimg" src="image 16.png" alt="xyz" /><span
+                  class="temp-title"
+                  >Template 1</span
+                >
+              </button>
+              <button class="template" onclick="showlayout(0)">
+                <img class="tempimg" src="image 16.png" alt="xyz" /><span
+                  class="temp-title"
+                  >Template 1</span
+                >
+              </button>
+              <button class="template" onclick="showlayout(0)">
+                <img class="tempimg" src="image 16.png" alt="xyz" /><span
+                  class="temp-title"
+                  >Template 1</span
+                >
+              </button>
+              <button class="template" onclick="showlayout(0)">
+                <img class="tempimg" src="image 16.png" alt="xyz" /><span
+                  class="temp-title"
+                  >Template 1</span
+                >
+              </button>
+            </div>
+
+            <!----------------------------- The Modal ----------------------------->
+            <div id="myModal" class="modal">
+              <!-- ---------------------------Modal content ----------------------------->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                  <p class="modal-hello">Hello {{ first Name }}</p>
+                  <p class="modal-paragraph">
+                    Handle All Your Legal Discovery Needs in One Secure Place.
+                  </p>
+                </div>
+                <div class="modal-body">
+                  <img
+                    class="modal-image"
+                    src="customer-success-graphic1.png"
+                    alt="xyz"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button class="modal-learnmore-btn">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabPanel">
+            <p>sahil</p>
+          </div>
+
+          <!-- ------------------------------------Builder---------------------------------- -->
+
+          <div class="tabPanel">vgdfhgjhshghfh</div>
+          <!-- ------------------------------------Setting---------------------------------- -->
+
+          <div class="tabPanel">aaaaaaaaaaa</div>
+        </div>
+      </div>
     </div>
     <script>
       document
@@ -47,6 +125,65 @@
             .querySelector(".wrapper")
             .classList.toggle("side-panel-open");
         });
+
+      /*--------------------------------------------------- TAB JAVASCRIPT ----------------------------------------------------*/
+
+      var tabButtons = document.querySelectorAll(
+        ".tabContainer .buttonContainer button"
+      );
+      var tabPanels = document.querySelectorAll(".tabContainer  .tabPanel");
+
+      function showPanel(panelIndex, colorCode) {
+        tabButtons.forEach(function (node) {
+          node.style.backgroundColor = "";
+          node.style.color = "";
+        });
+        tabButtons[panelIndex].style.backgroundColor = "black";
+        tabButtons[panelIndex].style.color = "white";
+        tabPanels.forEach(function (node) {
+          node.style.display = "none";
+        });
+
+        tabPanels[panelIndex].style.display = "block";
+        tabPanels[panelIndex].style.backgroundColor = colorCode;
+      }
+      showPanel(0);
+
+      /*--------------------------------------------------- Layout JAVASCRIPT ------------------------------------------------------*/
+
+      var layoutPanels = document.querySelectorAll(
+        ".tabContainer  .layoutpanel"
+      );
+
+      function showlayout() {}
+
+      /*--------------------------------------------------- MODAL JAVASCRIPT ------------------------------------------------------*/
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>
